@@ -1,7 +1,7 @@
 import re
-from util import format_jira_datetime, convert_millis_to_minutes
+from util import format_jira_datetime, convert_millis_to_minutes, extract_text_from_content
 
-def transform_custom_field_value(value):
+def transform(value):
     if isinstance(value, dict):
         if 'displayName' in value:
             return value['displayName']
@@ -11,6 +11,8 @@ def transform_custom_field_value(value):
             return value['value']
         elif 'name' in value:
             return value['name']
+        elif isinstance(value, dict) and 'content' in value:
+            return extract_text_from_content(value)
         elif 'completedCycles' in value and value['completedCycles']:
             return str([{
                 key: format_jira_datetime(cycle[key]['jira']) if key in ['startTime', 'stopTime', 'breachTime']
@@ -26,6 +28,10 @@ def transform_custom_field_value(value):
             })
         elif 'hasEpicLinkFieldDependency' in value:
             return None
+        elif isinstance(value, dict) and 'votes' in value:
+            return value['votes']
+        elif isinstance(value, dict) and 'watchCount' in value:
+            return value['watchCount']
     elif isinstance(value, list):
         if not value:
             return None

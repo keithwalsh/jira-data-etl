@@ -1,45 +1,45 @@
 import os
-from dotenv import load_dotenv
 import mysql.connector
+from dotenv import load_dotenv
 from mysql.connector import Error
 
 env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env')
 load_dotenv(dotenv_path=env_path)
 
 def load(data, table_name):
+
+    if not data:  # Early exit if data is empty
+        print("No data provided to load.")
+        return
+
     try:
-        connection = mysql.connector.connect(
+        with mysql.connector.connect(
             host=os.getenv('MYSQL_HOST'),
             port=os.getenv('MYSQL_PORT'),
             user=os.getenv('MYSQL_USER'),
             password=os.getenv('MYSQL_PASSWORD'),
             database=os.getenv('MYSQL_DATABASE')
-        )
-        cursor = connection.cursor()
+        ) as connection, connection.cursor() as cursor:
+            
+            truncate_query = f"TRUNCATE TABLE {table_name};"
+            cursor.execute(truncate_query)
+            print(f"Table {table_name} truncated successfully.")
 
-        columns = list(data[0].keys()) if data else []
-        columns_list = ', '.join(columns)
-        placeholders = ', '.join(['%s'] * len(columns))
-        
-        truncate_query = f"TRUNCATE TABLE {table_name};"
-        insert_query = f"""
-        INSERT INTO {table_name} (
-            {columns_list}
-        ) VALUES ({placeholders})
-        """
-
-        cursor.execute(truncate_query)
-        print(f"Table {table_name} truncated successfully.")
-
-        cursor.executemany(insert_query, [tuple(value[col] for col in columns) for value in data])
-        connection.commit()
-        print("All records inserted successfully.")
+            columns = ', '.join(data[0].keys())
+            placeholders = ', '.join(['%s'] * len(data[0]))
+            insert_query = f"INSERT INTO {table_name} ({columns}) VALUES ({placeholders})"
+            
+            data_to_insert = [tuple(item.values()) for item in data]
+            
+            cursor.executemany(insert_query, data_to_insert)
+            connection.commit()
+            print(f"All records inserted successfully into {table_name}.")
 
     except Error as e:
-        print("Error while inserting into MySQL", e)
-        connection.rollback()
+        print(f"Error while inserting into MySQL: {e}")
+        if connection.is_connected():
+            connection.rollback()
+
     finally:
         if connection.is_connected():
-            cursor.close()
-            connection.close()
             print("MySQL connection is closed")
