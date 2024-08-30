@@ -1,8 +1,10 @@
 import re
-from util import format_jira_datetime, convert_millis_to_minutes, extract_text_from_content
+from util import format_jira_datetime, convert_millis_to_minutes, extract_text_from_content, now
 
-def transform(value):
-    if isinstance(value, dict):
+def transform_value(value):
+    if value is None:
+        return None
+    elif isinstance(value, dict):
         if 'displayName' in value:
             return value['displayName']
         elif 'requestType' in value and 'name' in value['requestType']:
@@ -42,3 +44,18 @@ def transform(value):
             return format_jira_datetime(value)
         return value if value.strip() else None
     return str(value) if str(value).strip() else None
+
+def transform_dict(dictionary):
+    return {key: transform_value(value) for key, value in dictionary.items()} if dictionary is not None else None
+
+def map_field(issues, is_field_type, mode):
+    return [
+        {
+            'issue_id': issue['id'],
+            'field_id': key,
+            'value': transform_value(value),
+            'mysql_updated': now()
+        }
+        for issue in issues if issue and 'fields' in issue
+        for key, value in issue['fields'].items() if is_field_type(key, mode) and value is not None
+    ]
