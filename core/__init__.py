@@ -1,4 +1,3 @@
-from .extract import extract
-from .transform import transform_value, transform_dict, map_field
+from .extract import make_api_request
 from .load import load
 from .workflow import process_issues

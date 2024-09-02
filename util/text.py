@@ -1,3 +1,5 @@
+import re
+
 def extract_text_from_content(data):
     if not isinstance(data, dict) or 'content' not in data:
         return data if isinstance(data, str) else ""
@@ -19,3 +21,7 @@ def extract_text_from_content(data):
             for list_item in item['content']:
                 result += "* " + extract_text_from_content(list_item) + '\n'
     return result.strip()
+
+def extract_issue_number(url):
+    match = re.search(r'/issue/(\d+)/', url)
+    return match.group(1) if match else "No match found"

@@ -1,11 +1,9 @@
-from util import token
+from util import get_auth_header
 import requests
 
-def extract(url):
-    headers = {'Authorization': f'Basic {token()}'}
-    
+def make_api_request(url: str) -> dict:
     try:
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers={'Authorization': get_auth_header()})
         response.raise_for_status()
         return response.json()
     except Exception as e:
