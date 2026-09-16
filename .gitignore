@@ -1,8 +1,15 @@
-__pycache__/
+# Secrets
+.env
+!.env.example
 
-*.notes
-*.copy
-*.env
+# Editor directories and files
+.claude
+.idea
+.vscode
 
+# Other
 combined.py
 dev.py
+__pycache__/
+*.notes
+*.copy
