@@ -42,7 +42,9 @@ def comments(issues):
     for issue in issues:
         start_at, total = 0, None
         while total is None or start_at < total:
-            response = make_api_request(f'{issue['self']}/comment')
+            response = make_api_request(f'{issue['self']}/comment?startAt={start_at}')
+            if response is None:
+                raise RuntimeError(f"Jira comment request failed for issue {issue['key']} at startAt={start_at}")
             for item in get(response,'comments'):
                 if isinstance(item, dict):
                     comment = {
@@ -57,7 +59,7 @@ def comments(issues):
                         'mysql_updated': now()
                     }
                     all_comments.append(comment)  # Add the comment to the list
-            start_at += response.get('maxResults', 0)
+            start_at += len(get(response, 'comments') or []) or response.get('maxResults', 50)
             total = response.get('total', 0)
     load(all_comments,'comment')
 

@@ -57,7 +57,7 @@ The JQL lives in `main.py` (`jql = ...`). Change it there.
 | --- | --- |
 | `JIRA_EMAIL` | Atlassian account email. With `JIRA_API_TOKEN` it forms the Basic auth header. |
 | `JIRA_API_TOKEN` | API token from id.atlassian.com. Sent on its own if no email is set. |
-| `JIRA_DOMAIN` | Your site, `yourcompany.atlassian.net`. **Read by nothing yet; see Known issues.** |
+| `JIRA_DOMAIN` | Your site, `yourcompany.atlassian.net`. |
 | `MYSQL_HOST`, `MYSQL_PORT`, `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_DATABASE` | Target database. |
 
 ## Layout
@@ -77,23 +77,22 @@ util/time.py       timestamp formatting
 
 Verified against the code on 16 September 2026.
 
-1. **Pagination does not advance.** `core/workflow.py` counts `startAt` up but always requests
-   `startAt=0`, so a query larger than one page re-reads the first page until the counter passes
-   `total`. Comments have the same shape: `startAt` is never sent.
-2. **Each page truncates the table.** Combined with the above, a multi-page run keeps only the
-   rows from the last page processed. The tool is correct only for queries that fit in one page.
-3. **The site is hardcoded.** The search URL names one Atlassian site (which no longer answers)
-   and ignores `JIRA_DOMAIN`.
-4. **No schema shipped.** The four tables must be created by hand.
-5. **A failed request ends the run with a traceback.** `make_api_request` prints the error and
-   returns `None`; the caller then indexes it.
-6. Jira Cloud only (REST API v3, Atlassian Document Format bodies). MySQL only. No tests.
+1. **No schema shipped.** The four tables must be created by hand.
+2. **A failed request stops the run.** `make_api_request` prints the error and returns `None`;
+   the loaders then raise `RuntimeError` naming the page or issue that failed. Nothing is
+   retried, and because each table is truncated before insert, a run that fails part-way leaves
+   the tables that had already loaded refreshed and the rest untouched.
+3. Jira Cloud only (REST API v3, Atlassian Document Format bodies). MySQL only. No tests.
+
+Fixed 16 September 2026: issue and comment pagination never advanced past the first page, each
+page truncated its table so only the last page survived, and the search URL was hardcoded to one
+Atlassian site instead of reading `JIRA_DOMAIN`.
 
 ## Roadmap
 
 In this order.
 
-- [ ] Pagination and `JIRA_DOMAIN`: fix items 1 to 3 above, and load each table once per run
+- [x] Pagination and `JIRA_DOMAIN`; load each table once per run
 - [ ] A command line: `jira-data-etl --base-url ... --jql ... --to mysql|duckdb`
 - [ ] DuckDB target, with tables created on first run, so a clone runs with no database setup
 - [ ] Jira Data Center support (REST API v2, wiki-markup bodies), demonstrated against Apache's
