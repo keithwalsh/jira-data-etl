@@ -1,0 +1,182 @@
+{
+ "startAt": 0,
+ "maxResults": 100,
+ "total": 5,
+ "comments": [
+  {
+   "self": "https://issues.apache.org/jira/rest/api/2/issue/13666081/comment/18114916",
+   "id": "18114916",
+   "author": {
+    "self": "https://issues.apache.org/jira/rest/api/2/user?username=rishi08rana",
+    "name": "rishi08rana",
+    "key": "JIRAUSER314407",
+    "avatarUrls": {
+     "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+     "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+     "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+     "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+    },
+    "displayName": "Rishi Kant Rana",
+    "active": true,
+    "timeZone": "Etc/UTC"
+   },
+   "body": "PR Raised [https://github.com/apache/kafka/pull/23444/] ",
+   "updateAuthor": {
+    "self": "https://issues.apache.org/jira/rest/api/2/user?username=rishi08rana",
+    "name": "rishi08rana",
+    "key": "JIRAUSER314407",
+    "avatarUrls": {
+     "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+     "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+     "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+     "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+    },
+    "displayName": "Rishi Kant Rana",
+    "active": true,
+    "timeZone": "Etc/UTC"
+   },
+   "created": "2026-09-13T21:49:42.396+0000",
+   "updated": "2026-09-13T21:49:42.396+0000"
+  },
+  {
+   "self": "https://issues.apache.org/jira/rest/api/2/issue/13666081/comment/18115073",
+   "id": "18115073",
+   "author": {
+    "self": "https://issues.apache.org/jira/rest/api/2/user?username=apoorvmittal10",
+    "name": "apoorvmittal10",
+    "key": "apoorvmittal10",
+    "avatarUrls": {
+     "48x48": "https://issues.apache.org/jira/secure/useravatar?ownerId=apoorvmittal10&avatarId=52944",
+     "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&ownerId=apoorvmittal10&avatarId=52944",
+     "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&ownerId=apoorvmittal10&avatarId=52944",
+     "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&ownerId=apoorvmittal10&avatarId=52944"
+    },
+    "displayName": "Apoorv Mittal",
+    "active": true,
+    "timeZone": "Etc/UTC"
+   },
+   "body": "[~stevenschlansker] Thanks for raising the issue. This all does make sense.\r\n\r\nSo we are talking about 3 concerns, correct me if I am missing something:\r\n # Telemetry too large exception is not propagated correctly to client when it fails to decompress. I can see [https://github.com/apache/kafka/pull/23444/] has been raised by [~rishi08rana] for same.\r\n # Client side handling when telemetry too large exception is encountered. I can see you have created: https://issues.apache.org/jira/browse/KAFKA-21077 for same.\r\n # A separate config for decompression ratio or decompression max bytes with documentation.\r\n\r\nIs there anything else I am missing?",
+   "updateAuthor": {
+    "self": "https://issues.apache.org/jira/rest/api/2/user?username=apoorvmittal10",
+    "name": "apoorvmittal10",
+    "key": "apoorvmittal10",
+    "avatarUrls": {
+     "48x48": "https://issues.apache.org/jira/secure/useravatar?ownerId=apoorvmittal10&avatarId=52944",
+     "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&ownerId=apoorvmittal10&avatarId=52944",
+     "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&ownerId=apoorvmittal10&avatarId=52944",
+     "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&ownerId=apoorvmittal10&avatarId=52944"
+    },
+    "displayName": "Apoorv Mittal",
+    "active": true,
+    "timeZone": "Etc/UTC"
+   },
+   "created": "2026-09-14T09:09:20.223+0000",
+   "updated": "2026-09-14T09:09:20.223+0000"
+  },
+  {
+   "self": "https://issues.apache.org/jira/rest/api/2/issue/13666081/comment/18115339",
+   "id": "18115339",
+   "author": {
+    "self": "https://issues.apache.org/jira/rest/api/2/user?username=rishi08rana",
+    "name": "rishi08rana",
+    "key": "JIRAUSER314407",
+    "avatarUrls": {
+     "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+     "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+     "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+     "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+    },
+    "displayName": "Rishi Kant Rana",
+    "active": true,
+    "timeZone": "Etc/UTC"
+   },
+   "body": "[~apoorvmittal10]  [~stevenschlansker] , raised [https://github.com/apache/kafka/pull/23465] to address point 3.",
+   "updateAuthor": {
+    "self": "https://issues.apache.org/jira/rest/api/2/user?username=rishi08rana",
+    "name": "rishi08rana",
+    "key": "JIRAUSER314407",
+    "avatarUrls": {
+     "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+     "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+     "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+     "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+    },
+    "displayName": "Rishi Kant Rana",
+    "active": true,
+    "timeZone": "Etc/UTC"
+   },
+   "created": "2026-09-14T23:03:48.274+0000",
+   "updated": "2026-09-14T23:03:48.274+0000"
+  },
+  {
+   "self": "https://issues.apache.org/jira/rest/api/2/issue/13666081/comment/18115645",
+   "id": "18115645",
+   "author": {
+    "self": "https://issues.apache.org/jira/rest/api/2/user?username=apoorvmittal10",
+    "name": "apoorvmittal10",
+    "key": "apoorvmittal10",
+    "avatarUrls": {
+     "48x48": "https://issues.apache.org/jira/secure/useravatar?ownerId=apoorvmittal10&avatarId=52944",
+     "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&ownerId=apoorvmittal10&avatarId=52944",
+     "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&ownerId=apoorvmittal10&avatarId=52944",
+     "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&ownerId=apoorvmittal10&avatarId=52944"
+    },
+    "displayName": "Apoorv Mittal",
+    "active": true,
+    "timeZone": "Etc/UTC"
+   },
+   "body": "[~stevenschlansker] For this Jira, where title is specific to the issue fixed by [~rishi08rana] in the PR [https://github.com/apache/kafka/pull/23444/], I am marking the Jira as resolved.\r\n\r\nFor discussion around separate config and decompression max bytes, the idea is to maintain `telemetry.max.bytes` to right config which fits the uncompressed metrics bytes. Compression is to save on network bandwidth for metrics request. In case you think we need an improvement there then please open a follow up which can be discussed separately.",
+   "updateAuthor": {
+    "self": "https://issues.apache.org/jira/rest/api/2/user?username=apoorvmittal10",
+    "name": "apoorvmittal10",
+    "key": "apoorvmittal10",
+    "avatarUrls": {
+     "48x48": "https://issues.apache.org/jira/secure/useravatar?ownerId=apoorvmittal10&avatarId=52944",
+     "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&ownerId=apoorvmittal10&avatarId=52944",
+     "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&ownerId=apoorvmittal10&avatarId=52944",
+     "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&ownerId=apoorvmittal10&avatarId=52944"
+    },
+    "displayName": "Apoorv Mittal",
+    "active": true,
+    "timeZone": "Etc/UTC"
+   },
+   "created": "2026-09-15T15:17:24.799+0000",
+   "updated": "2026-09-15T15:17:24.799+0000"
+  },
+  {
+   "self": "https://issues.apache.org/jira/rest/api/2/issue/13666081/comment/18115747",
+   "id": "18115747",
+   "author": {
+    "self": "https://issues.apache.org/jira/rest/api/2/user?username=stevenschlansker",
+    "name": "stevenschlansker",
+    "key": "stevenschlansker",
+    "avatarUrls": {
+     "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+     "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+     "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+     "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+    },
+    "displayName": "Steven Schlansker",
+    "active": true,
+    "timeZone": "America/Los_Angeles"
+   },
+   "body": "Thank you! Yes, having max bytes apply to decompressed size is acceptable to us - we can tune appropriately.",
+   "updateAuthor": {
+    "self": "https://issues.apache.org/jira/rest/api/2/user?username=stevenschlansker",
+    "name": "stevenschlansker",
+    "key": "stevenschlansker",
+    "avatarUrls": {
+     "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+     "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+     "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+     "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+    },
+    "displayName": "Steven Schlansker",
+    "active": true,
+    "timeZone": "America/Los_Angeles"
+   },
+   "created": "2026-09-15T20:19:55.953+0000",
+   "updated": "2026-09-15T20:19:55.953+0000"
+  }
+ ]
+}

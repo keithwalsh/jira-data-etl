@@ -1,5 +1,7 @@
 # jira-data-etl
 
+[![CI](https://github.com/keithwalsh/jira-data-etl/actions/workflows/ci.yml/badge.svg)](https://github.com/keithwalsh/jira-data-etl/actions/workflows/ci.yml)
+
 A lightweight Python loader from the Jira REST API into a SQL database. One JQL query in; four
 tables out: issues with their standard fields, custom fields in long format, the full changelog,
 and comments, with Jira's nested JSON flattened into plain columns. Works against Jira Cloud
@@ -107,7 +109,10 @@ Verified against the code on 16 September 2026.
 2. **A failed request stops the run.** Nothing is retried, and because each table is emptied
    before insert, a run that fails part-way leaves the tables already loaded refreshed and the
    rest untouched.
-3. **No tests yet.** The live check above is the only verification.
+3. **Tests cover the transforms, pagination and the DuckDB loader, not the MySQL loader.** The
+   fixtures under `tests/fixtures/` are two real KAFKA issues and one comment page recorded from
+   Apache's Jira on 16 September 2026, so `pytest` needs no network. Run with
+   `pip install -e ".[test]" && pytest`.
 
 Fixed 16 September 2026: issue and comment pagination never advanced past the first page, each
 page truncated its table so only the last page survived, the search URL was hardcoded to one
@@ -120,7 +125,7 @@ In this order.
 - [x] Pagination and `JIRA_DOMAIN`; load each table once per run
 - [x] Command line entry point; DuckDB target with tables created on first run
 - [x] Jira Data Center (REST API v2) and anonymous access, checked against Apache's Jira
-- [ ] Tests against recorded API responses; GitHub Actions on every push
+- [x] Tests against recorded API responses; GitHub Actions on every push (Python 3.12 and 3.13)
 - [ ] Create MySQL tables when missing
 - [ ] Publish to PyPI
 

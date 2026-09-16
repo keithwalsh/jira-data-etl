@@ -23,6 +23,7 @@ classifiers = [
 
 [project.optional-dependencies]
 mysql = ["mysql-connector-python>=8.0"]
+test = ["pytest>=8"]
 
 [project.urls]
 Homepage = "https://github.com/keithwalsh/jira-data-etl"

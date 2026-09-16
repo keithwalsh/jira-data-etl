@@ -1,0 +1,1267 @@
+{
+ "expand": "schema,names",
+ "startAt": 0,
+ "maxResults": 50,
+ "total": 2,
+ "issues": [
+  {
+   "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+   "id": "13666081",
+   "self": "https://issues.apache.org/jira/rest/api/2/issue/13666081",
+   "key": "KAFKA-21076",
+   "fields": {
+    "fixVersions": [
+     {
+      "self": "https://issues.apache.org/jira/rest/api/2/version/12357379",
+      "id": "12357379",
+      "name": "4.5.0",
+      "archived": false,
+      "released": false
+     }
+    ],
+    "resolution": {
+     "self": "https://issues.apache.org/jira/rest/api/2/resolution/1",
+     "id": "1",
+     "description": "A fix for this issue is checked into the tree and tested.",
+     "name": "Fixed"
+    },
+    "customfield_12312322": null,
+    "customfield_12312323": null,
+    "customfield_12312320": null,
+    "customfield_12310420": "9223372036854775807",
+    "customfield_12312321": null,
+    "customfield_12312328": null,
+    "customfield_12312329": null,
+    "customfield_12312326": null,
+    "customfield_12310300": null,
+    "customfield_12312327": null,
+    "customfield_12312324": null,
+    "customfield_12312720": null,
+    "customfield_12312325": null,
+    "lastViewed": null,
+    "priority": {
+     "self": "https://issues.apache.org/jira/rest/api/2/priority/3",
+     "iconUrl": "https://issues.apache.org/jira/images/icons/priorities/major.svg",
+     "name": "Major",
+     "id": "3"
+    },
+    "labels": [],
+    "customfield_12312333": null,
+    "customfield_12312334": null,
+    "customfield_12313422": "false",
+    "customfield_12310310": "0.0",
+    "customfield_12312331": null,
+    "customfield_12312332": null,
+    "aggregatetimeoriginalestimate": null,
+    "timeestimate": null,
+    "customfield_12312330": null,
+    "versions": [
+     {
+      "self": "https://issues.apache.org/jira/rest/api/2/version/12356783",
+      "id": "12356783",
+      "name": "4.3.1",
+      "archived": false,
+      "released": true,
+      "releaseDate": "2026-06-25"
+     }
+    ],
+    "customfield_12311120": null,
+    "customfield_12313826": null,
+    "customfield_12312339": null,
+    "issuelinks": [
+     {
+      "id": "12728045",
+      "self": "https://issues.apache.org/jira/rest/api/2/issueLink/12728045",
+      "type": {
+       "id": "10030",
+       "name": "Reference",
+       "inward": "is related to",
+       "outward": "relates to",
+       "self": "https://issues.apache.org/jira/rest/api/2/issueLinkType/10030"
+      },
+      "inwardIssue": {
+       "id": "13666082",
+       "key": "KAFKA-21077",
+       "self": "https://issues.apache.org/jira/rest/api/2/issue/13666082",
+       "fields": {
+        "summary": "Java client does not honor GetTelemetrySubscriptionsResponse.TelemetryMaxBytes",
+        "status": {
+         "self": "https://issues.apache.org/jira/rest/api/2/status/1",
+         "description": "The issue is open and ready for the assignee to start work on it.",
+         "iconUrl": "https://issues.apache.org/jira/images/icons/statuses/open.png",
+         "name": "Open",
+         "id": "1",
+         "statusCategory": {
+          "self": "https://issues.apache.org/jira/rest/api/2/statuscategory/2",
+          "id": 2,
+          "key": "new",
+          "colorName": "blue-gray",
+          "name": "To Do"
+         }
+        },
+        "priority": {
+         "self": "https://issues.apache.org/jira/rest/api/2/priority/4",
+         "iconUrl": "https://issues.apache.org/jira/images/icons/priorities/minor.svg",
+         "name": "Minor",
+         "id": "4"
+        },
+        "issuetype": {
+         "self": "https://issues.apache.org/jira/rest/api/2/issuetype/1",
+         "id": "1",
+         "description": "A problem which impairs or prevents the functions of the product.",
+         "iconUrl": "https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype",
+         "name": "Bug",
+         "subtask": false,
+         "avatarId": 21133
+        }
+       }
+      }
+     },
+     {
+      "id": "12728046",
+      "self": "https://issues.apache.org/jira/rest/api/2/issueLink/12728046",
+      "type": {
+       "id": "10030",
+       "name": "Reference",
+       "inward": "is related to",
+       "outward": "relates to",
+       "self": "https://issues.apache.org/jira/rest/api/2/issueLinkType/10030"
+      },
+      "inwardIssue": {
+       "id": "13666083",
+       "key": "KAFKA-21078",
+       "self": "https://issues.apache.org/jira/rest/api/2/issue/13666083",
+       "fields": {
+        "summary": "Telemetry reporter pushes metrics whose sensors are disabled by metrics.recording.level",
+        "status": {
+         "self": "https://issues.apache.org/jira/rest/api/2/status/1",
+         "description": "The issue is open and ready for the assignee to start work on it.",
+         "iconUrl": "https://issues.apache.org/jira/images/icons/statuses/open.png",
+         "name": "Open",
+         "id": "1",
+         "statusCategory": {
+          "self": "https://issues.apache.org/jira/rest/api/2/statuscategory/2",
+          "id": 2,
+          "key": "new",
+          "colorName": "blue-gray",
+          "name": "To Do"
+         }
+        },
+        "priority": {
+         "self": "https://issues.apache.org/jira/rest/api/2/priority/4",
+         "iconUrl": "https://issues.apache.org/jira/images/icons/priorities/minor.svg",
+         "name": "Minor",
+         "id": "4"
+        },
+        "issuetype": {
+         "self": "https://issues.apache.org/jira/rest/api/2/issuetype/4",
+         "id": "4",
+         "description": "An improvement or enhancement to an existing feature or task.",
+         "iconUrl": "https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21140&avatarType=issuetype",
+         "name": "Improvement",
+         "subtask": false,
+         "avatarId": 21140
+        }
+       }
+      }
+     }
+    ],
+    "customfield_12313825": null,
+    "assignee": {
+     "self": "https://issues.apache.org/jira/rest/api/2/user?username=rishi08rana",
+     "name": "rishi08rana",
+     "key": "JIRAUSER314407",
+     "avatarUrls": {
+      "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+      "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+      "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+      "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+     },
+     "displayName": "Rishi Kant Rana",
+     "active": true,
+     "timeZone": "Etc/UTC"
+    },
+    "customfield_12312337": null,
+    "customfield_12313823": null,
+    "customfield_12312338": null,
+    "customfield_12311920": null,
+    "customfield_12313822": null,
+    "customfield_12312335": null,
+    "customfield_12313821": null,
+    "customfield_12312336": null,
+    "customfield_12313820": null,
+    "status": {
+     "self": "https://issues.apache.org/jira/rest/api/2/status/5",
+     "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.",
+     "iconUrl": "https://issues.apache.org/jira/images/icons/statuses/resolved.png",
+     "name": "Resolved",
+     "id": "5",
+     "statusCategory": {
+      "self": "https://issues.apache.org/jira/rest/api/2/statuscategory/3",
+      "id": 3,
+      "key": "done",
+      "colorName": "green",
+      "name": "Done"
+     }
+    },
+    "components": [
+     {
+      "self": "https://issues.apache.org/jira/rest/api/2/component/12315218",
+      "id": "12315218",
+      "name": "clients"
+     },
+     {
+      "self": "https://issues.apache.org/jira/rest/api/2/component/12315217",
+      "id": "12315217",
+      "name": "core"
+     }
+    ],
+    "customfield_12312026": null,
+    "customfield_12312023": null,
+    "customfield_12312024": null,
+    "aggregatetimeestimate": null,
+    "customfield_12312022": null,
+    "customfield_12310921": null,
+    "customfield_12310920": "9223372036854775807",
+    "customfield_12312823": null,
+    "creator": {
+     "self": "https://issues.apache.org/jira/rest/api/2/user?username=stevenschlansker",
+     "name": "stevenschlansker",
+     "key": "stevenschlansker",
+     "avatarUrls": {
+      "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+      "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+      "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+      "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+     },
+     "displayName": "Steven Schlansker",
+     "active": true,
+     "timeZone": "America/Los_Angeles"
+    },
+    "subtasks": [],
+    "reporter": {
+     "self": "https://issues.apache.org/jira/rest/api/2/user?username=stevenschlansker",
+     "name": "stevenschlansker",
+     "key": "stevenschlansker",
+     "avatarUrls": {
+      "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+      "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+      "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+      "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+     },
+     "displayName": "Steven Schlansker",
+     "active": true,
+     "timeZone": "America/Los_Angeles"
+    },
+    "aggregateprogress": {
+     "progress": 0,
+     "total": 0
+    },
+    "customfield_12313520": null,
+    "customfield_12310250": null,
+    "progress": {
+     "progress": 0,
+     "total": 0
+    },
+    "customfield_12313924": null,
+    "votes": {
+     "self": "https://issues.apache.org/jira/rest/api/2/issue/KAFKA-21076/votes",
+     "votes": 0,
+     "hasVoted": false
+    },
+    "customfield_12313920": null,
+    "issuetype": {
+     "self": "https://issues.apache.org/jira/rest/api/2/issuetype/1",
+     "id": "1",
+     "description": "A problem which impairs or prevents the functions of the product.",
+     "iconUrl": "https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21133&avatarType=issuetype",
+     "name": "Bug",
+     "subtask": false,
+     "avatarId": 21133
+    },
+    "timespent": null,
+    "customfield_12314020": "{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@65c63dfc[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@102717d5[overall=PullRequestOverallBean{stateCount=0, state='OPEN', details=PullRequestOverallDetails{openCount=0, mergedCount=0, declinedCount=0}},byInstanceType={}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@4e1861fa[overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@66a94e53[failedBuildCount=0,successfulBuildCount=0,unknownBuildCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@21dd1c58[overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@173ae7da[stateCount=0,state=<null>,dueDate=<null>,overDue=false,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@1aa04376[overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@36575da7[topEnvironments=[],showProjects=false,successfulCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@7fa1a8e9[overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@3f6594f0[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@2746cb99[overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@2bf010b3[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}]},errors=[],configErrors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":\"OPEN\",\"details\":{\"openCount\":0,\"mergedCount\":0,\"declinedCount\":0,\"total\":0},\"open\":true},\"byInstanceType\":{}},\"build\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"failedBuildCount\":0,\"successfulBuildCount\":0,\"unknownBuildCount\":0},\"byInstanceType\":{}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"topEnvironments\":[],\"showProjects\":false,\"successfulCount\":0},\"byInstanceType\":{}},\"repository\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":false}}",
+    "customfield_12314141": null,
+    "customfield_12314140": null,
+    "project": {
+     "self": "https://issues.apache.org/jira/rest/api/2/project/12311720",
+     "id": "12311720",
+     "key": "KAFKA",
+     "name": "Kafka",
+     "projectTypeKey": "software",
+     "avatarUrls": {
+      "48x48": "https://issues.apache.org/jira/secure/projectavatar?pid=12311720&avatarId=35864",
+      "24x24": "https://issues.apache.org/jira/secure/projectavatar?size=small&pid=12311720&avatarId=35864",
+      "16x16": "https://issues.apache.org/jira/secure/projectavatar?size=xsmall&pid=12311720&avatarId=35864",
+      "32x32": "https://issues.apache.org/jira/secure/projectavatar?size=medium&pid=12311720&avatarId=35864"
+     },
+     "projectCategory": {
+      "self": "https://issues.apache.org/jira/rest/api/2/projectCategory/10560",
+      "id": "10560",
+      "description": "Apache Kafka projects",
+      "name": "Kafka"
+     }
+    },
+    "aggregatetimespent": null,
+    "customfield_12312520": null,
+    "customfield_12312521": "Tue Sep 15 20:19:55 UTC 2026",
+    "customfield_12314422": null,
+    "customfield_12314421": null,
+    "customfield_12314146": null,
+    "customfield_12314420": null,
+    "customfield_12314145": null,
+    "customfield_12314144": null,
+    "customfield_12314143": null,
+    "resolutiondate": "2026-09-15T15:17:43.000+0000",
+    "workratio": -1,
+    "customfield_12312923": null,
+    "customfield_12312920": null,
+    "customfield_12312921": null,
+    "watches": {
+     "self": "https://issues.apache.org/jira/rest/api/2/issue/KAFKA-21076/watchers",
+     "watchCount": 4,
+     "isWatching": false
+    },
+    "created": "2026-09-11T22:54:17.000+0000",
+    "customfield_10022": null,
+    "updated": "2026-09-15T20:19:55.000+0000",
+    "timeoriginalestimate": null,
+    "description": "Since [PR #22327|https://github.com/apache/kafka/pull/22327] (4.3.1, \"MINOR: Fixed metrics decompression\"), {{ClientTelemetryUtils.decompress}} throws {{TelemetryTooLargeException}} when the decompressed payload exceeds {{{}telemetry.max.bytes{}}}. The call runs inside {{ClientMetricsManager.processPushTelemetryRequest}} in the plugin export block, whose {{catch (Throwable)}} maps every failure to {{{}Errors.INVALID_RECORD{}}}:\r\n{code:java}\r\ncatch (Throwable exception) {\r\n    clientMetricsStats.recordPluginErrorCount(clientInstanceId);\r\n    clientInstance.lastKnownError(Errors.INVALID_RECORD);\r\n    log.error(\"Error exporting client metrics to the plugin for client instance id: {}\", clientInstanceId, exception);\r\n    return request.errorResponse(0, Errors.INVALID_RECORD);\r\n}\r\n{code}\r\nKIP-714 defines INVALID_RECORD as \"Broker failed to decode or validate the client's encoded metrics. Log an error and stop pushing metrics. This is viewed as a problem in the client implementation of metrics serialization that is not likely to be resolved by retrying.\" The Java client implements exactly that in {{{}ClientTelemetryUtils.maybeFetchErrorIntervalMs{}}}: on INVALID_RECORD it sets the push interval to {{{}Integer.MAX_VALUE{}}}, so telemetry from that client instance stops until the process restarts.\r\n\r\nThe validatePushRequest method throws the same TelemetryTooLargeException when the wire size exceeds telemetry.max.bytes, and that path returns the error through Errors.forException, which yields TELEMETRY_TOO_LARGE. So the broker returns two different codes for the same exception class depending on whether the check happens before or after decompression.\r\n\r\nKIP-714 defines TELEMETRY_TOO_LARGE for a payload that is too large, and the client handles that code by retrying at the normal interval.\r\n\r\nObserved effect: after a broker upgrade from 4.3.0 to 4.3.1, every Kafka Streams stream-thread consumer (payload several MB decompressed, under 1 MiB compressed) got INVALID_RECORD on its next push and disabled its telemetry. All {{org.apache.kafka.stream.*}} metrics that KIP-1076 routes through the stream-thread consumers disappeared from the metrics backend in every environment at the same time. Broker log:\r\n{noformat}\r\nERROR Error exporting client metrics to the plugin for client instance id: xkdFrlXGTGig-RPx5SjuQA (org.apache.kafka.server.ClientMetricsManager)\r\norg.apache.kafka.common.errors.TelemetryTooLargeException: Decompressed telemetry metrics exceed maximum allowed size: 1048576\r\n{noformat}\r\nTwo further points:\r\n * KIP-714 documents {{telemetry.max.bytes}} as \"The maximum size (after compression if compression is used) of telemetry pushed from a client to the broker.\" PR #22327 changed the meaning to also bound the decompressed size, with no KIP update, no release note, and no new configuration. A 4.3.0 cluster that accepted a client's pushes rejects the same pushes on 4.3.1.\r\n * Before PR #22327 the same code path allocated {{metrics.limit() * 2}} bytes and grew without bound, so a bound is reasonable. The bound needs its own error code and, given that decompression ratios of 10x or more are normal for OTLP metrics, its own configuration or a multiple of {{{}telemetry.max.bytes{}}}.\r\n\r\nMeasured on a Kafka Streams application (8 stream threads, subscription metrics=*, push interval 30 s) against 4.3.1 brokers. The broker's RequestMetrics RequestBytes histogram for PushTelemetry put the compressed push at a 40 KB mean, 940 KB p95, 1.34 MB p99 and 1.41 MB max in one cluster, 2.08 MB max in another; all of these passed the 1 MiB wire check before 4.3.1 or were rejected with the retryable TELEMETRY_TOO_LARGE. With telemetry.max.bytes raised to 32 MiB the brokers still logged \"Decompressed telemetry metrics exceed maximum allowed size: 33554432\" for several of these pushes, and 128 MiB was needed before every push was accepted. That is an expansion ratio of at least 25x between the compressed payload the client and the wire check see and the decompressed payload the new check bounds, which is the normal ratio for OTLP metrics with repeated label sets. A single telemetry.max.bytes cannot bound both sensibly: a value that admits a legitimate decompressed payload is meaningless as a wire limit. The decompressed bound should have its own configuration, or a documented multiple of telemetry.max.bytes, and it should return TELEMETRY_TOO_LARGE like the wire check does.\r\n\r\nSuggested fix: catch {{TelemetryTooLargeException}} before the generic {{catch (Throwable)}} and return {{{}Errors.TELEMETRY_TOO_LARGE{}}}, so the client retries at its interval instead of disabling telemetry. Document the decompressed bound in {{telemetry.max.bytes}} or add a separate configuration, and mention the behavior change in the upgrade notes.\r\n\r\nWorkaround: raise {{telemetry.max.bytes}} on the brokers and restart affected clients.",
+    "customfield_10010": null,
+    "customfield_12314523": null,
+    "customfield_12314127": null,
+    "customfield_12314522": null,
+    "customfield_12314126": null,
+    "customfield_12314521": null,
+    "customfield_12314125": null,
+    "customfield_12314520": null,
+    "customfield_12314124": null,
+    "customfield_12312340": null,
+    "customfield_12314123": null,
+    "customfield_12312341": null,
+    "customfield_12312220": null,
+    "customfield_12314122": null,
+    "customfield_12314121": null,
+    "customfield_12314120": null,
+    "customfield_12314129": null,
+    "customfield_12314524": null,
+    "customfield_12314128": null,
+    "summary": "Oversize decompressed telemetry payload returns INVALID_RECORD and permanently disables client telemetry",
+    "customfield_12314130": null,
+    "customfield_12310291": null,
+    "customfield_12310290": null,
+    "customfield_12314138": null,
+    "customfield_12314137": null,
+    "environment": null,
+    "customfield_12314136": null,
+    "customfield_12314135": null,
+    "customfield_12311020": null,
+    "customfield_12314134": null,
+    "duedate": null,
+    "customfield_12314132": null,
+    "customfield_12314131": null,
+    "customfield_12311820": "0|z240l4:",
+    "customfield_12314139": null
+   },
+   "changelog": {
+    "startAt": 0,
+    "maxResults": 17,
+    "total": 17,
+    "histories": [
+     {
+      "id": "23263932",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=stevenschlansker",
+       "name": "stevenschlansker",
+       "key": "stevenschlansker",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "Steven Schlansker",
+       "active": true,
+       "timeZone": "America/Los_Angeles"
+      },
+      "created": "2026-09-11T23:00:16.457+0000",
+      "items": [
+       {
+        "field": "description",
+        "fieldtype": "jira",
+        "from": null,
+        "fromString": "Since [PR #22327|https://github.com/apache/kafka/pull/22327] (4.3.1, \"MINOR: Fixed metrics decompression\"), \\{{ClientTelemetryUtils.decompress}} throws \\{{TelemetryTooLargeException}} when the decompressed payload exceeds \\{{telemetry.max.bytes}}. The call runs inside \\{{ClientMetricsManager.processPushTelemetryRequest}} in the plugin export block, whose \\{{catch (Throwable)}} maps every failure to \\{{Errors.INVALID_RECORD}}:\r\n\r\n{code:java}\r\ncatch (Throwable exception) {\r\n    clientMetricsStats.recordPluginErrorCount(clientInstanceId);\r\n    clientInstance.lastKnownError(Errors.INVALID_RECORD);\r\n    log.error(\"Error exporting client metrics to the plugin for client instance id: {}\", clientInstanceId, exception);\r\n    return request.errorResponse(0, Errors.INVALID_RECORD);\r\n}\r\n{code}\r\n\r\nKIP-714 defines INVALID_RECORD as \"Broker failed to decode or validate the client's encoded metrics. Log an error and stop pushing metrics. This is viewed as a problem in the client implementation of metrics serialization that is not likely to be resolved by retrying.\" The Java client implements exactly that in \\{{ClientTelemetryUtils.maybeFetchErrorIntervalMs}}: on INVALID_RECORD it sets the push interval to \\{{Integer.MAX_VALUE}}, so telemetry from that client instance stops until the process restarts.\r\n\r\nKIP-714 defines TELEMETRY_TOO_LARGE for a payload that is too large, and the client handles that code by retrying at the normal interval.\r\n\r\nObserved effect: after a broker upgrade from 4.3.0 to 4.3.1, every Kafka Streams stream-thread consumer (payload several MB decompressed, under 1 MiB compressed) got INVALID_RECORD on its next push and disabled its telemetry. All \\{{org.apache.kafka.stream.\\*}} metrics that KIP-1076 routes through the stream-thread consumers disappeared from the metrics backend in every environment at the same time. Broker log:\r\n\r\n{noformat}\r\nERROR Error exporting client metrics to the plugin for client instance id: xkdFrlXGTGig-RPx5SjuQA (org.apache.kafka.server.ClientMetricsManager)\r\norg.apache.kafka.common.errors.TelemetryTooLargeException: Decompressed telemetry metrics exceed maximum allowed size: 1048576\r\n{noformat}\r\n\r\nTwo further points:\r\n\r\n* KIP-714 documents \\{{telemetry.max.bytes}} as \"The maximum size (after compression if compression is used) of telemetry pushed from a client to the broker.\" PR #22327 changed the meaning to also bound the decompressed size, with no KIP update, no release note, and no new configuration. A 4.3.0 cluster that accepted a client's pushes rejects the same pushes on 4.3.1.\r\n* Before PR #22327 the same code path allocated \\{{metrics.limit() \\* 2}} bytes and grew without bound, so a bound is reasonable. The bound needs its own error code and, given that decompression ratios of 10x or more are normal for OTLP metrics, its own configuration or a multiple of \\{{telemetry.max.bytes}}.\r\n\r\nSuggested fix: catch \\{{TelemetryTooLargeException}} before the generic \\{{catch (Throwable)}} and return \\{{Errors.TELEMETRY_TOO_LARGE}}, so the client retries at its interval instead of disabling telemetry. Document the decompressed bound in \\{{telemetry.max.bytes}} or add a separate configuration, and mention the behavior change in the upgrade notes.\r\n\r\nWorkaround: raise \\{{telemetry.max.bytes}} on the brokers and restart affected clients.",
+        "to": null,
+        "toString": "Since [PR #22327|https://github.com/apache/kafka/pull/22327] (4.3.1, \"MINOR: Fixed metrics decompression\"), {{ClientTelemetryUtils.decompress}} throws {{TelemetryTooLargeException}} when the decompressed payload exceeds {{{}telemetry.max.bytes{}}}. The call runs inside {{ClientMetricsManager.processPushTelemetryRequest}} in the plugin export block, whose {{catch (Throwable)}} maps every failure to {{{}Errors.INVALID_RECORD{}}}:\r\n{code:java}\r\ncatch (Throwable exception) {\r\n    clientMetricsStats.recordPluginErrorCount(clientInstanceId);\r\n    clientInstance.lastKnownError(Errors.INVALID_RECORD);\r\n    log.error(\"Error exporting client metrics to the plugin for client instance id: {}\", clientInstanceId, exception);\r\n    return request.errorResponse(0, Errors.INVALID_RECORD);\r\n}\r\n{code}\r\nKIP-714 defines INVALID_RECORD as \"Broker failed to decode or validate the client's encoded metrics. Log an error and stop pushing metrics. This is viewed as a problem in the client implementation of metrics serialization that is not likely to be resolved by retrying.\" The Java client implements exactly that in {{{}ClientTelemetryUtils.maybeFetchErrorIntervalMs{}}}: on INVALID_RECORD it sets the push interval to {{{}Integer.MAX_VALUE{}}}, so telemetry from that client instance stops until the process restarts.\r\n\r\nThe validatePushRequest method throws the same TelemetryTooLargeException when the wire size exceeds telemetry.max.bytes, and that path returns the error through Errors.forException, which yields TELEMETRY_TOO_LARGE. So the broker returns two different codes for the same exception class depending on whether the check happens before or after decompression.\r\n\r\nKIP-714 defines TELEMETRY_TOO_LARGE for a payload that is too large, and the client handles that code by retrying at the normal interval.\r\n\r\nObserved effect: after a broker upgrade from 4.3.0 to 4.3.1, every Kafka Streams stream-thread consumer (payload several MB decompressed, under 1 MiB compressed) got INVALID_RECORD on its next push and disabled its telemetry. All {{org.apache.kafka.stream.*}} metrics that KIP-1076 routes through the stream-thread consumers disappeared from the metrics backend in every environment at the same time. Broker log:\r\n{noformat}\r\nERROR Error exporting client metrics to the plugin for client instance id: xkdFrlXGTGig-RPx5SjuQA (org.apache.kafka.server.ClientMetricsManager)\r\norg.apache.kafka.common.errors.TelemetryTooLargeException: Decompressed telemetry metrics exceed maximum allowed size: 1048576\r\n{noformat}\r\nTwo further points:\r\n * KIP-714 documents {{telemetry.max.bytes}} as \"The maximum size (after compression if compression is used) of telemetry pushed from a client to the broker.\" PR #22327 changed the meaning to also bound the decompressed size, with no KIP update, no release note, and no new configuration. A 4.3.0 cluster that accepted a client's pushes rejects the same pushes on 4.3.1.\r\n * Before PR #22327 the same code path allocated {{metrics.limit() * 2}} bytes and grew without bound, so a bound is reasonable. The bound needs its own error code and, given that decompression ratios of 10x or more are normal for OTLP metrics, its own configuration or a multiple of {{{}telemetry.max.bytes{}}}.\r\n\r\nSuggested fix: catch {{TelemetryTooLargeException}} before the generic {{catch (Throwable)}} and return {{{}Errors.TELEMETRY_TOO_LARGE{}}}, so the client retries at its interval instead of disabling telemetry. Document the decompressed bound in {{telemetry.max.bytes}} or add a separate configuration, and mention the behavior change in the upgrade notes.\r\n\r\nWorkaround: raise {{telemetry.max.bytes}} on the brokers and restart affected clients."
+       }
+      ]
+     },
+     {
+      "id": "23263936",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=stevenschlansker",
+       "name": "stevenschlansker",
+       "key": "stevenschlansker",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "Steven Schlansker",
+       "active": true,
+       "timeZone": "America/Los_Angeles"
+      },
+      "created": "2026-09-11T23:03:09.437+0000",
+      "items": [
+       {
+        "field": "Link",
+        "fieldtype": "jira",
+        "from": null,
+        "fromString": null,
+        "to": "KAFKA-21077",
+        "toString": "This issue is related to KAFKA-21077"
+       }
+      ]
+     },
+     {
+      "id": "23263939",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=stevenschlansker",
+       "name": "stevenschlansker",
+       "key": "stevenschlansker",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "Steven Schlansker",
+       "active": true,
+       "timeZone": "America/Los_Angeles"
+      },
+      "created": "2026-09-11T23:03:48.833+0000",
+      "items": [
+       {
+        "field": "Link",
+        "fieldtype": "jira",
+        "from": null,
+        "fromString": null,
+        "to": "KAFKA-21078",
+        "toString": "This issue is related to KAFKA-21078"
+       }
+      ]
+     },
+     {
+      "id": "23264008",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=stevenschlansker",
+       "name": "stevenschlansker",
+       "key": "stevenschlansker",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "Steven Schlansker",
+       "active": true,
+       "timeZone": "America/Los_Angeles"
+      },
+      "created": "2026-09-12T01:49:23.090+0000",
+      "items": [
+       {
+        "field": "description",
+        "fieldtype": "jira",
+        "from": null,
+        "fromString": "Since [PR #22327|https://github.com/apache/kafka/pull/22327] (4.3.1, \"MINOR: Fixed metrics decompression\"), {{ClientTelemetryUtils.decompress}} throws {{TelemetryTooLargeException}} when the decompressed payload exceeds {{{}telemetry.max.bytes{}}}. The call runs inside {{ClientMetricsManager.processPushTelemetryRequest}} in the plugin export block, whose {{catch (Throwable)}} maps every failure to {{{}Errors.INVALID_RECORD{}}}:\r\n{code:java}\r\ncatch (Throwable exception) {\r\n    clientMetricsStats.recordPluginErrorCount(clientInstanceId);\r\n    clientInstance.lastKnownError(Errors.INVALID_RECORD);\r\n    log.error(\"Error exporting client metrics to the plugin for client instance id: {}\", clientInstanceId, exception);\r\n    return request.errorResponse(0, Errors.INVALID_RECORD);\r\n}\r\n{code}\r\nKIP-714 defines INVALID_RECORD as \"Broker failed to decode or validate the client's encoded metrics. Log an error and stop pushing metrics. This is viewed as a problem in the client implementation of metrics serialization that is not likely to be resolved by retrying.\" The Java client implements exactly that in {{{}ClientTelemetryUtils.maybeFetchErrorIntervalMs{}}}: on INVALID_RECORD it sets the push interval to {{{}Integer.MAX_VALUE{}}}, so telemetry from that client instance stops until the process restarts.\r\n\r\nThe validatePushRequest method throws the same TelemetryTooLargeException when the wire size exceeds telemetry.max.bytes, and that path returns the error through Errors.forException, which yields TELEMETRY_TOO_LARGE. So the broker returns two different codes for the same exception class depending on whether the check happens before or after decompression.\r\n\r\nKIP-714 defines TELEMETRY_TOO_LARGE for a payload that is too large, and the client handles that code by retrying at the normal interval.\r\n\r\nObserved effect: after a broker upgrade from 4.3.0 to 4.3.1, every Kafka Streams stream-thread consumer (payload several MB decompressed, under 1 MiB compressed) got INVALID_RECORD on its next push and disabled its telemetry. All {{org.apache.kafka.stream.*}} metrics that KIP-1076 routes through the stream-thread consumers disappeared from the metrics backend in every environment at the same time. Broker log:\r\n{noformat}\r\nERROR Error exporting client metrics to the plugin for client instance id: xkdFrlXGTGig-RPx5SjuQA (org.apache.kafka.server.ClientMetricsManager)\r\norg.apache.kafka.common.errors.TelemetryTooLargeException: Decompressed telemetry metrics exceed maximum allowed size: 1048576\r\n{noformat}\r\nTwo further points:\r\n * KIP-714 documents {{telemetry.max.bytes}} as \"The maximum size (after compression if compression is used) of telemetry pushed from a client to the broker.\" PR #22327 changed the meaning to also bound the decompressed size, with no KIP update, no release note, and no new configuration. A 4.3.0 cluster that accepted a client's pushes rejects the same pushes on 4.3.1.\r\n * Before PR #22327 the same code path allocated {{metrics.limit() * 2}} bytes and grew without bound, so a bound is reasonable. The bound needs its own error code and, given that decompression ratios of 10x or more are normal for OTLP metrics, its own configuration or a multiple of {{{}telemetry.max.bytes{}}}.\r\n\r\nSuggested fix: catch {{TelemetryTooLargeException}} before the generic {{catch (Throwable)}} and return {{{}Errors.TELEMETRY_TOO_LARGE{}}}, so the client retries at its interval instead of disabling telemetry. Document the decompressed bound in {{telemetry.max.bytes}} or add a separate configuration, and mention the behavior change in the upgrade notes.\r\n\r\nWorkaround: raise {{telemetry.max.bytes}} on the brokers and restart affected clients.",
+        "to": null,
+        "toString": "Since [PR #22327|https://github.com/apache/kafka/pull/22327] (4.3.1, \"MINOR: Fixed metrics decompression\"), {{ClientTelemetryUtils.decompress}} throws {{TelemetryTooLargeException}} when the decompressed payload exceeds {{{}telemetry.max.bytes{}}}. The call runs inside {{ClientMetricsManager.processPushTelemetryRequest}} in the plugin export block, whose {{catch (Throwable)}} maps every failure to {{{}Errors.INVALID_RECORD{}}}:\r\n{code:java}\r\ncatch (Throwable exception) {\r\n    clientMetricsStats.recordPluginErrorCount(clientInstanceId);\r\n    clientInstance.lastKnownError(Errors.INVALID_RECORD);\r\n    log.error(\"Error exporting client metrics to the plugin for client instance id: {}\", clientInstanceId, exception);\r\n    return request.errorResponse(0, Errors.INVALID_RECORD);\r\n}\r\n{code}\r\nKIP-714 defines INVALID_RECORD as \"Broker failed to decode or validate the client's encoded metrics. Log an error and stop pushing metrics. This is viewed as a problem in the client implementation of metrics serialization that is not likely to be resolved by retrying.\" The Java client implements exactly that in {{{}ClientTelemetryUtils.maybeFetchErrorIntervalMs{}}}: on INVALID_RECORD it sets the push interval to {{{}Integer.MAX_VALUE{}}}, so telemetry from that client instance stops until the process restarts.\r\n\r\nThe validatePushRequest method throws the same TelemetryTooLargeException when the wire size exceeds telemetry.max.bytes, and that path returns the error through Errors.forException, which yields TELEMETRY_TOO_LARGE. So the broker returns two different codes for the same exception class depending on whether the check happens before or after decompression.\r\n\r\nKIP-714 defines TELEMETRY_TOO_LARGE for a payload that is too large, and the client handles that code by retrying at the normal interval.\r\n\r\nObserved effect: after a broker upgrade from 4.3.0 to 4.3.1, every Kafka Streams stream-thread consumer (payload several MB decompressed, under 1 MiB compressed) got INVALID_RECORD on its next push and disabled its telemetry. All {{org.apache.kafka.stream.*}} metrics that KIP-1076 routes through the stream-thread consumers disappeared from the metrics backend in every environment at the same time. Broker log:\r\n{noformat}\r\nERROR Error exporting client metrics to the plugin for client instance id: xkdFrlXGTGig-RPx5SjuQA (org.apache.kafka.server.ClientMetricsManager)\r\norg.apache.kafka.common.errors.TelemetryTooLargeException: Decompressed telemetry metrics exceed maximum allowed size: 1048576\r\n{noformat}\r\nTwo further points:\r\n * KIP-714 documents {{telemetry.max.bytes}} as \"The maximum size (after compression if compression is used) of telemetry pushed from a client to the broker.\" PR #22327 changed the meaning to also bound the decompressed size, with no KIP update, no release note, and no new configuration. A 4.3.0 cluster that accepted a client's pushes rejects the same pushes on 4.3.1.\r\n * Before PR #22327 the same code path allocated {{metrics.limit() * 2}} bytes and grew without bound, so a bound is reasonable. The bound needs its own error code and, given that decompression ratios of 10x or more are normal for OTLP metrics, its own configuration or a multiple of {{{}telemetry.max.bytes{}}}.\r\n\r\n  Measured on a Kafka Streams application (8 stream threads, subscription metrics=*, push interval 30 s) against 4.3.1 brokers. The broker's RequestMetrics RequestBytes histogram for PushTelemetry put the compressed push at a 40 KB mean, 940 KB p95, 1.34 MB p99 and 1.41 MB max in one cluster, 2.08 MB max in another; all of these passed the 1 MiB wire check before 4.3.1 or were rejected with the retryable TELEMETRY_TOO_LARGE. With telemetry.max.bytes raised to 32 MiB the brokers still logged \"Decompressed telemetry metrics exceed maximum allowed size: 33554432\" for several of these pushes, and 128 MiB was needed before every push was accepted. That is an expansion ratio of at least 25x between the compressed payload the client and the wire check see and the decompressed payload the new check bounds, which is the normal ratio for OTLP metrics with repeated label sets. A single telemetry.max.bytes cannot bound both sensibly: a value that admits a legitimate decompressed payload is meaningless as a wire limit. The decompressed bound should have its own configuration, or a documented multiple of telemetry.max.bytes, and it should return TELEMETRY_TOO_LARGE like the wire check does.\r\n\r\nSuggested fix: catch {{TelemetryTooLargeException}} before the generic {{catch (Throwable)}} and return {{{}Errors.TELEMETRY_TOO_LARGE{}}}, so the client retries at its interval instead of disabling telemetry. Document the decompressed bound in {{telemetry.max.bytes}} or add a separate configuration, and mention the behavior change in the upgrade notes.\r\n\r\nWorkaround: raise {{telemetry.max.bytes}} on the brokers and restart affected clients."
+       }
+      ]
+     },
+     {
+      "id": "23264010",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=stevenschlansker",
+       "name": "stevenschlansker",
+       "key": "stevenschlansker",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "Steven Schlansker",
+       "active": true,
+       "timeZone": "America/Los_Angeles"
+      },
+      "created": "2026-09-12T01:49:36.749+0000",
+      "items": [
+       {
+        "field": "description",
+        "fieldtype": "jira",
+        "from": null,
+        "fromString": "Since [PR #22327|https://github.com/apache/kafka/pull/22327] (4.3.1, \"MINOR: Fixed metrics decompression\"), {{ClientTelemetryUtils.decompress}} throws {{TelemetryTooLargeException}} when the decompressed payload exceeds {{{}telemetry.max.bytes{}}}. The call runs inside {{ClientMetricsManager.processPushTelemetryRequest}} in the plugin export block, whose {{catch (Throwable)}} maps every failure to {{{}Errors.INVALID_RECORD{}}}:\r\n{code:java}\r\ncatch (Throwable exception) {\r\n    clientMetricsStats.recordPluginErrorCount(clientInstanceId);\r\n    clientInstance.lastKnownError(Errors.INVALID_RECORD);\r\n    log.error(\"Error exporting client metrics to the plugin for client instance id: {}\", clientInstanceId, exception);\r\n    return request.errorResponse(0, Errors.INVALID_RECORD);\r\n}\r\n{code}\r\nKIP-714 defines INVALID_RECORD as \"Broker failed to decode or validate the client's encoded metrics. Log an error and stop pushing metrics. This is viewed as a problem in the client implementation of metrics serialization that is not likely to be resolved by retrying.\" The Java client implements exactly that in {{{}ClientTelemetryUtils.maybeFetchErrorIntervalMs{}}}: on INVALID_RECORD it sets the push interval to {{{}Integer.MAX_VALUE{}}}, so telemetry from that client instance stops until the process restarts.\r\n\r\nThe validatePushRequest method throws the same TelemetryTooLargeException when the wire size exceeds telemetry.max.bytes, and that path returns the error through Errors.forException, which yields TELEMETRY_TOO_LARGE. So the broker returns two different codes for the same exception class depending on whether the check happens before or after decompression.\r\n\r\nKIP-714 defines TELEMETRY_TOO_LARGE for a payload that is too large, and the client handles that code by retrying at the normal interval.\r\n\r\nObserved effect: after a broker upgrade from 4.3.0 to 4.3.1, every Kafka Streams stream-thread consumer (payload several MB decompressed, under 1 MiB compressed) got INVALID_RECORD on its next push and disabled its telemetry. All {{org.apache.kafka.stream.*}} metrics that KIP-1076 routes through the stream-thread consumers disappeared from the metrics backend in every environment at the same time. Broker log:\r\n{noformat}\r\nERROR Error exporting client metrics to the plugin for client instance id: xkdFrlXGTGig-RPx5SjuQA (org.apache.kafka.server.ClientMetricsManager)\r\norg.apache.kafka.common.errors.TelemetryTooLargeException: Decompressed telemetry metrics exceed maximum allowed size: 1048576\r\n{noformat}\r\nTwo further points:\r\n * KIP-714 documents {{telemetry.max.bytes}} as \"The maximum size (after compression if compression is used) of telemetry pushed from a client to the broker.\" PR #22327 changed the meaning to also bound the decompressed size, with no KIP update, no release note, and no new configuration. A 4.3.0 cluster that accepted a client's pushes rejects the same pushes on 4.3.1.\r\n * Before PR #22327 the same code path allocated {{metrics.limit() * 2}} bytes and grew without bound, so a bound is reasonable. The bound needs its own error code and, given that decompression ratios of 10x or more are normal for OTLP metrics, its own configuration or a multiple of {{{}telemetry.max.bytes{}}}.\r\n\r\n  Measured on a Kafka Streams application (8 stream threads, subscription metrics=*, push interval 30 s) against 4.3.1 brokers. The broker's RequestMetrics RequestBytes histogram for PushTelemetry put the compressed push at a 40 KB mean, 940 KB p95, 1.34 MB p99 and 1.41 MB max in one cluster, 2.08 MB max in another; all of these passed the 1 MiB wire check before 4.3.1 or were rejected with the retryable TELEMETRY_TOO_LARGE. With telemetry.max.bytes raised to 32 MiB the brokers still logged \"Decompressed telemetry metrics exceed maximum allowed size: 33554432\" for several of these pushes, and 128 MiB was needed before every push was accepted. That is an expansion ratio of at least 25x between the compressed payload the client and the wire check see and the decompressed payload the new check bounds, which is the normal ratio for OTLP metrics with repeated label sets. A single telemetry.max.bytes cannot bound both sensibly: a value that admits a legitimate decompressed payload is meaningless as a wire limit. The decompressed bound should have its own configuration, or a documented multiple of telemetry.max.bytes, and it should return TELEMETRY_TOO_LARGE like the wire check does.\r\n\r\nSuggested fix: catch {{TelemetryTooLargeException}} before the generic {{catch (Throwable)}} and return {{{}Errors.TELEMETRY_TOO_LARGE{}}}, so the client retries at its interval instead of disabling telemetry. Document the decompressed bound in {{telemetry.max.bytes}} or add a separate configuration, and mention the behavior change in the upgrade notes.\r\n\r\nWorkaround: raise {{telemetry.max.bytes}} on the brokers and restart affected clients.",
+        "to": null,
+        "toString": "Since [PR #22327|https://github.com/apache/kafka/pull/22327] (4.3.1, \"MINOR: Fixed metrics decompression\"), {{ClientTelemetryUtils.decompress}} throws {{TelemetryTooLargeException}} when the decompressed payload exceeds {{{}telemetry.max.bytes{}}}. The call runs inside {{ClientMetricsManager.processPushTelemetryRequest}} in the plugin export block, whose {{catch (Throwable)}} maps every failure to {{{}Errors.INVALID_RECORD{}}}:\r\n{code:java}\r\ncatch (Throwable exception) {\r\n    clientMetricsStats.recordPluginErrorCount(clientInstanceId);\r\n    clientInstance.lastKnownError(Errors.INVALID_RECORD);\r\n    log.error(\"Error exporting client metrics to the plugin for client instance id: {}\", clientInstanceId, exception);\r\n    return request.errorResponse(0, Errors.INVALID_RECORD);\r\n}\r\n{code}\r\nKIP-714 defines INVALID_RECORD as \"Broker failed to decode or validate the client's encoded metrics. Log an error and stop pushing metrics. This is viewed as a problem in the client implementation of metrics serialization that is not likely to be resolved by retrying.\" The Java client implements exactly that in {{{}ClientTelemetryUtils.maybeFetchErrorIntervalMs{}}}: on INVALID_RECORD it sets the push interval to {{{}Integer.MAX_VALUE{}}}, so telemetry from that client instance stops until the process restarts.\r\n\r\nThe validatePushRequest method throws the same TelemetryTooLargeException when the wire size exceeds telemetry.max.bytes, and that path returns the error through Errors.forException, which yields TELEMETRY_TOO_LARGE. So the broker returns two different codes for the same exception class depending on whether the check happens before or after decompression.\r\n\r\nKIP-714 defines TELEMETRY_TOO_LARGE for a payload that is too large, and the client handles that code by retrying at the normal interval.\r\n\r\nObserved effect: after a broker upgrade from 4.3.0 to 4.3.1, every Kafka Streams stream-thread consumer (payload several MB decompressed, under 1 MiB compressed) got INVALID_RECORD on its next push and disabled its telemetry. All {{org.apache.kafka.stream.*}} metrics that KIP-1076 routes through the stream-thread consumers disappeared from the metrics backend in every environment at the same time. Broker log:\r\n{noformat}\r\nERROR Error exporting client metrics to the plugin for client instance id: xkdFrlXGTGig-RPx5SjuQA (org.apache.kafka.server.ClientMetricsManager)\r\norg.apache.kafka.common.errors.TelemetryTooLargeException: Decompressed telemetry metrics exceed maximum allowed size: 1048576\r\n{noformat}\r\nTwo further points:\r\n * KIP-714 documents {{telemetry.max.bytes}} as \"The maximum size (after compression if compression is used) of telemetry pushed from a client to the broker.\" PR #22327 changed the meaning to also bound the decompressed size, with no KIP update, no release note, and no new configuration. A 4.3.0 cluster that accepted a client's pushes rejects the same pushes on 4.3.1.\r\n * Before PR #22327 the same code path allocated {{metrics.limit() * 2}} bytes and grew without bound, so a bound is reasonable. The bound needs its own error code and, given that decompression ratios of 10x or more are normal for OTLP metrics, its own configuration or a multiple of {{{}telemetry.max.bytes{}}}.\r\n\r\nMeasured on a Kafka Streams application (8 stream threads, subscription metrics=*, push interval 30 s) against 4.3.1 brokers. The broker's RequestMetrics RequestBytes histogram for PushTelemetry put the compressed push at a 40 KB mean, 940 KB p95, 1.34 MB p99 and 1.41 MB max in one cluster, 2.08 MB max in another; all of these passed the 1 MiB wire check before 4.3.1 or were rejected with the retryable TELEMETRY_TOO_LARGE. With telemetry.max.bytes raised to 32 MiB the brokers still logged \"Decompressed telemetry metrics exceed maximum allowed size: 33554432\" for several of these pushes, and 128 MiB was needed before every push was accepted. That is an expansion ratio of at least 25x between the compressed payload the client and the wire check see and the decompressed payload the new check bounds, which is the normal ratio for OTLP metrics with repeated label sets. A single telemetry.max.bytes cannot bound both sensibly: a value that admits a legitimate decompressed payload is meaningless as a wire limit. The decompressed bound should have its own configuration, or a documented multiple of telemetry.max.bytes, and it should return TELEMETRY_TOO_LARGE like the wire check does.\r\n\r\nSuggested fix: catch {{TelemetryTooLargeException}} before the generic {{catch (Throwable)}} and return {{{}Errors.TELEMETRY_TOO_LARGE{}}}, so the client retries at its interval instead of disabling telemetry. Document the decompressed bound in {{telemetry.max.bytes}} or add a separate configuration, and mention the behavior change in the upgrade notes.\r\n\r\nWorkaround: raise {{telemetry.max.bytes}} on the brokers and restart affected clients."
+       }
+      ]
+     },
+     {
+      "id": "23264885",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=rishi08rana",
+       "name": "rishi08rana",
+       "key": "JIRAUSER314407",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "Rishi Kant Rana",
+       "active": true,
+       "timeZone": "Etc/UTC"
+      },
+      "created": "2026-09-13T03:17:13.239+0000",
+      "items": [
+       {
+        "field": "assignee",
+        "fieldtype": "jira",
+        "from": null,
+        "fromString": null,
+        "to": "JIRAUSER314407",
+        "toString": "Rishi Kant Rana"
+       }
+      ]
+     },
+     {
+      "id": "23264886",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=githubbot",
+       "name": "githubbot",
+       "key": "githubbot",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "ASF GitHub Bot",
+       "active": true,
+       "timeZone": "Europe/London"
+      },
+      "created": "2026-09-13T03:21:52.427+0000",
+      "items": [
+       {
+        "field": "RemoteIssueLink",
+        "fieldtype": "jira",
+        "from": null,
+        "fromString": null,
+        "to": "446082",
+        "toString": "This issue links to \"GitHub Pull Request #23444 (Web Link)\""
+       }
+      ]
+     },
+     {
+      "id": "23265801",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=rishi08rana",
+       "name": "rishi08rana",
+       "key": "JIRAUSER314407",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "Rishi Kant Rana",
+       "active": true,
+       "timeZone": "Etc/UTC"
+      },
+      "created": "2026-09-13T21:48:40.648+0000",
+      "items": [
+       {
+        "field": "status",
+        "fieldtype": "jira",
+        "from": "1",
+        "fromString": "Open",
+        "to": "3",
+        "toString": "In Progress"
+       }
+      ]
+     },
+     {
+      "id": "23267317",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=githubbot",
+       "name": "githubbot",
+       "key": "githubbot",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "ASF GitHub Bot",
+       "active": true,
+       "timeZone": "Europe/London"
+      },
+      "created": "2026-09-14T16:08:36.825+0000",
+      "items": [
+       {
+        "field": "RemoteIssueLink",
+        "fieldtype": "jira",
+        "from": "446082",
+        "fromString": "This issue links to \"GitHub Pull Request #23444 (Web Link)\"",
+        "to": "446082",
+        "toString": "This issue links to \"GitHub Pull Request #23444 (Web Link)\""
+       }
+      ]
+     },
+     {
+      "id": "23267320",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=githubbot",
+       "name": "githubbot",
+       "key": "githubbot",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "ASF GitHub Bot",
+       "active": true,
+       "timeZone": "Europe/London"
+      },
+      "created": "2026-09-14T16:10:04.271+0000",
+      "items": [
+       {
+        "field": "RemoteIssueLink",
+        "fieldtype": "jira",
+        "from": "446082",
+        "fromString": "This issue links to \"GitHub Pull Request #23444 (Web Link)\"",
+        "to": "446082",
+        "toString": "This issue links to \"GitHub Pull Request #23444 (Web Link)\""
+       }
+      ]
+     },
+     {
+      "id": "23267377",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=githubbot",
+       "name": "githubbot",
+       "key": "githubbot",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "ASF GitHub Bot",
+       "active": true,
+       "timeZone": "Europe/London"
+      },
+      "created": "2026-09-14T16:28:28.782+0000",
+      "items": [
+       {
+        "field": "RemoteIssueLink",
+        "fieldtype": "jira",
+        "from": "446082",
+        "fromString": "This issue links to \"GitHub Pull Request #23444 (Web Link)\"",
+        "to": "446082",
+        "toString": "This issue links to \"GitHub Pull Request #23444 (Web Link)\""
+       }
+      ]
+     },
+     {
+      "id": "23267398",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=githubbot",
+       "name": "githubbot",
+       "key": "githubbot",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "ASF GitHub Bot",
+       "active": true,
+       "timeZone": "Europe/London"
+      },
+      "created": "2026-09-14T16:38:42.630+0000",
+      "items": [
+       {
+        "field": "RemoteIssueLink",
+        "fieldtype": "jira",
+        "from": "446082",
+        "fromString": "This issue links to \"GitHub Pull Request #23444 (Web Link)\"",
+        "to": "446082",
+        "toString": "This issue links to \"GitHub Pull Request #23444 (Web Link)\""
+       }
+      ]
+     },
+     {
+      "id": "23267857",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=githubbot",
+       "name": "githubbot",
+       "key": "githubbot",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "ASF GitHub Bot",
+       "active": true,
+       "timeZone": "Europe/London"
+      },
+      "created": "2026-09-14T20:59:19.180+0000",
+      "items": [
+       {
+        "field": "RemoteIssueLink",
+        "fieldtype": "jira",
+        "from": "446082",
+        "fromString": "This issue links to \"GitHub Pull Request #23444 (Web Link)\"",
+        "to": "446082",
+        "toString": "This issue links to \"GitHub Pull Request #23444 (Web Link)\""
+       }
+      ]
+     },
+     {
+      "id": "23267961",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=githubbot",
+       "name": "githubbot",
+       "key": "githubbot",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "ASF GitHub Bot",
+       "active": true,
+       "timeZone": "Europe/London"
+      },
+      "created": "2026-09-14T23:01:34.056+0000",
+      "items": [
+       {
+        "field": "RemoteIssueLink",
+        "fieldtype": "jira",
+        "from": null,
+        "fromString": null,
+        "to": "446388",
+        "toString": "This issue links to \"GitHub Pull Request #23465 (Web Link)\""
+       }
+      ]
+     },
+     {
+      "id": "23269401",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=githubbot",
+       "name": "githubbot",
+       "key": "githubbot",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "ASF GitHub Bot",
+       "active": true,
+       "timeZone": "Europe/London"
+      },
+      "created": "2026-09-15T13:28:42.855+0000",
+      "items": [
+       {
+        "field": "RemoteIssueLink",
+        "fieldtype": "jira",
+        "from": "446388",
+        "fromString": "This issue links to \"GitHub Pull Request #23465 (Web Link)\"",
+        "to": "446388",
+        "toString": "This issue links to \"GitHub Pull Request #23465 (Web Link)\""
+       }
+      ]
+     },
+     {
+      "id": "23269677",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=apoorvmittal10",
+       "name": "apoorvmittal10",
+       "key": "apoorvmittal10",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?ownerId=apoorvmittal10&avatarId=52944",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&ownerId=apoorvmittal10&avatarId=52944",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&ownerId=apoorvmittal10&avatarId=52944",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&ownerId=apoorvmittal10&avatarId=52944"
+       },
+       "displayName": "Apoorv Mittal",
+       "active": true,
+       "timeZone": "Etc/UTC"
+      },
+      "created": "2026-09-15T15:17:43.981+0000",
+      "items": [
+       {
+        "field": "Fix Version",
+        "fieldtype": "jira",
+        "from": null,
+        "fromString": null,
+        "to": "12357379",
+        "toString": "4.5.0"
+       },
+       {
+        "field": "resolution",
+        "fieldtype": "jira",
+        "from": null,
+        "fromString": null,
+        "to": "1",
+        "toString": "Fixed"
+       },
+       {
+        "field": "status",
+        "fieldtype": "jira",
+        "from": "3",
+        "fromString": "In Progress",
+        "to": "5",
+        "toString": "Resolved"
+       }
+      ]
+     },
+     {
+      "id": "23269859",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=githubbot",
+       "name": "githubbot",
+       "key": "githubbot",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=10452",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=10452",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=10452",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=10452"
+       },
+       "displayName": "ASF GitHub Bot",
+       "active": true,
+       "timeZone": "Europe/London"
+      },
+      "created": "2026-09-15T16:40:46.090+0000",
+      "items": [
+       {
+        "field": "RemoteIssueLink",
+        "fieldtype": "jira",
+        "from": "446388",
+        "fromString": "This issue links to \"GitHub Pull Request #23465 (Web Link)\"",
+        "to": "446388",
+        "toString": "This issue links to \"GitHub Pull Request #23465 (Web Link)\""
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+   "id": "13666635",
+   "self": "https://issues.apache.org/jira/rest/api/2/issue/13666635",
+   "key": "KAFKA-21101",
+   "fields": {
+    "fixVersions": [],
+    "resolution": null,
+    "customfield_12312322": null,
+    "customfield_12312323": null,
+    "customfield_12312320": null,
+    "customfield_12310420": "9223372036854775807",
+    "customfield_12312321": null,
+    "customfield_12312328": null,
+    "customfield_12312329": null,
+    "customfield_12312326": null,
+    "customfield_12310300": null,
+    "customfield_12312327": null,
+    "customfield_12312324": null,
+    "customfield_12312720": null,
+    "customfield_12312325": null,
+    "lastViewed": null,
+    "priority": {
+     "self": "https://issues.apache.org/jira/rest/api/2/priority/3",
+     "iconUrl": "https://issues.apache.org/jira/images/icons/priorities/major.svg",
+     "name": "Major",
+     "id": "3"
+    },
+    "labels": [
+     "need-kip"
+    ],
+    "customfield_12312333": null,
+    "customfield_12312334": null,
+    "customfield_12313422": "false",
+    "customfield_12310310": "0.0",
+    "customfield_12312331": null,
+    "customfield_12312332": null,
+    "aggregatetimeoriginalestimate": null,
+    "timeestimate": null,
+    "customfield_12312330": null,
+    "versions": [],
+    "customfield_12311120": null,
+    "customfield_12313826": null,
+    "customfield_12312339": null,
+    "issuelinks": [
+     {
+      "id": "12728236",
+      "self": "https://issues.apache.org/jira/rest/api/2/issueLink/12728236",
+      "type": {
+       "id": "10030",
+       "name": "Reference",
+       "inward": "is related to",
+       "outward": "relates to",
+       "self": "https://issues.apache.org/jira/rest/api/2/issueLinkType/10030"
+      },
+      "inwardIssue": {
+       "id": "13666634",
+       "key": "KAFKA-21100",
+       "self": "https://issues.apache.org/jira/rest/api/2/issue/13666634",
+       "fields": {
+        "summary": "Defer materializing the record body until the record is confirmed to be retained",
+        "status": {
+         "self": "https://issues.apache.org/jira/rest/api/2/status/1",
+         "description": "The issue is open and ready for the assignee to start work on it.",
+         "iconUrl": "https://issues.apache.org/jira/images/icons/statuses/open.png",
+         "name": "Open",
+         "id": "1",
+         "statusCategory": {
+          "self": "https://issues.apache.org/jira/rest/api/2/statuscategory/2",
+          "id": 2,
+          "key": "new",
+          "colorName": "blue-gray",
+          "name": "To Do"
+         }
+        },
+        "priority": {
+         "self": "https://issues.apache.org/jira/rest/api/2/priority/3",
+         "iconUrl": "https://issues.apache.org/jira/images/icons/priorities/major.svg",
+         "name": "Major",
+         "id": "3"
+        },
+        "issuetype": {
+         "self": "https://issues.apache.org/jira/rest/api/2/issuetype/4",
+         "id": "4",
+         "description": "An improvement or enhancement to an existing feature or task.",
+         "iconUrl": "https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21140&avatarType=issuetype",
+         "name": "Improvement",
+         "subtask": false,
+         "avatarId": 21140
+        }
+       }
+      }
+     }
+    ],
+    "customfield_12313825": null,
+    "assignee": {
+     "self": "https://issues.apache.org/jira/rest/api/2/user?username=majialong",
+     "name": "majialong",
+     "key": "JIRAUSER310372",
+     "avatarUrls": {
+      "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=34058",
+      "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=34058",
+      "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=34058",
+      "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=34058"
+     },
+     "displayName": "majialong",
+     "active": true,
+     "timeZone": "Etc/UTC"
+    },
+    "customfield_12312337": null,
+    "customfield_12313823": null,
+    "customfield_12312338": null,
+    "customfield_12311920": null,
+    "customfield_12313822": null,
+    "customfield_12312335": null,
+    "customfield_12313821": null,
+    "customfield_12312336": null,
+    "customfield_12313820": null,
+    "status": {
+     "self": "https://issues.apache.org/jira/rest/api/2/status/1",
+     "description": "The issue is open and ready for the assignee to start work on it.",
+     "iconUrl": "https://issues.apache.org/jira/images/icons/statuses/open.png",
+     "name": "Open",
+     "id": "1",
+     "statusCategory": {
+      "self": "https://issues.apache.org/jira/rest/api/2/statuscategory/2",
+      "id": 2,
+      "key": "new",
+      "colorName": "blue-gray",
+      "name": "To Do"
+     }
+    },
+    "components": [],
+    "customfield_12312026": null,
+    "customfield_12312023": null,
+    "customfield_12312024": null,
+    "aggregatetimeestimate": null,
+    "customfield_12312022": null,
+    "customfield_12310921": null,
+    "customfield_12310920": "9223372036854775807",
+    "customfield_12312823": null,
+    "creator": {
+     "self": "https://issues.apache.org/jira/rest/api/2/user?username=chia7712",
+     "name": "chia7712",
+     "key": "chia7712",
+     "avatarUrls": {
+      "48x48": "https://issues.apache.org/jira/secure/useravatar?ownerId=chia7712&avatarId=46815",
+      "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&ownerId=chia7712&avatarId=46815",
+      "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&ownerId=chia7712&avatarId=46815",
+      "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&ownerId=chia7712&avatarId=46815"
+     },
+     "displayName": "Chia-Ping Tsai",
+     "active": true,
+     "timeZone": "Asia/Taipei"
+    },
+    "subtasks": [],
+    "reporter": {
+     "self": "https://issues.apache.org/jira/rest/api/2/user?username=chia7712",
+     "name": "chia7712",
+     "key": "chia7712",
+     "avatarUrls": {
+      "48x48": "https://issues.apache.org/jira/secure/useravatar?ownerId=chia7712&avatarId=46815",
+      "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&ownerId=chia7712&avatarId=46815",
+      "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&ownerId=chia7712&avatarId=46815",
+      "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&ownerId=chia7712&avatarId=46815"
+     },
+     "displayName": "Chia-Ping Tsai",
+     "active": true,
+     "timeZone": "Asia/Taipei"
+    },
+    "aggregateprogress": {
+     "progress": 0,
+     "total": 0
+    },
+    "customfield_12313520": null,
+    "customfield_12310250": null,
+    "progress": {
+     "progress": 0,
+     "total": 0
+    },
+    "customfield_12313924": null,
+    "votes": {
+     "self": "https://issues.apache.org/jira/rest/api/2/issue/KAFKA-21101/votes",
+     "votes": 0,
+     "hasVoted": false
+    },
+    "customfield_12313920": null,
+    "issuetype": {
+     "self": "https://issues.apache.org/jira/rest/api/2/issuetype/4",
+     "id": "4",
+     "description": "An improvement or enhancement to an existing feature or task.",
+     "iconUrl": "https://issues.apache.org/jira/secure/viewavatar?size=xsmall&avatarId=21140&avatarType=issuetype",
+     "name": "Improvement",
+     "subtask": false,
+     "avatarId": 21140
+    },
+    "timespent": null,
+    "customfield_12314020": "{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@6a7d4fa2[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@19f44d8e[overall=PullRequestOverallBean{stateCount=0, state='OPEN', details=PullRequestOverallDetails{openCount=0, mergedCount=0, declinedCount=0}},byInstanceType={}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@45c836e[overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@3f7f3656[failedBuildCount=0,successfulBuildCount=0,unknownBuildCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@27ce61bb[overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@4510d5d6[stateCount=0,state=<null>,dueDate=<null>,overDue=false,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@253769e9[overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@633c269f[topEnvironments=[],showProjects=false,successfulCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@372b40fa[overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@74569dac[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@6ab0daee[overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@68ba01f9[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}]},errors=[],configErrors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":\"OPEN\",\"details\":{\"openCount\":0,\"mergedCount\":0,\"declinedCount\":0,\"total\":0},\"open\":true},\"byInstanceType\":{}},\"build\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"failedBuildCount\":0,\"successfulBuildCount\":0,\"unknownBuildCount\":0},\"byInstanceType\":{}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"topEnvironments\":[],\"showProjects\":false,\"successfulCount\":0},\"byInstanceType\":{}},\"repository\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":false}}",
+    "customfield_12314141": null,
+    "customfield_12314140": null,
+    "project": {
+     "self": "https://issues.apache.org/jira/rest/api/2/project/12311720",
+     "id": "12311720",
+     "key": "KAFKA",
+     "name": "Kafka",
+     "projectTypeKey": "software",
+     "avatarUrls": {
+      "48x48": "https://issues.apache.org/jira/secure/projectavatar?pid=12311720&avatarId=35864",
+      "24x24": "https://issues.apache.org/jira/secure/projectavatar?size=small&pid=12311720&avatarId=35864",
+      "16x16": "https://issues.apache.org/jira/secure/projectavatar?size=xsmall&pid=12311720&avatarId=35864",
+      "32x32": "https://issues.apache.org/jira/secure/projectavatar?size=medium&pid=12311720&avatarId=35864"
+     },
+     "projectCategory": {
+      "self": "https://issues.apache.org/jira/rest/api/2/projectCategory/10560",
+      "id": "10560",
+      "description": "Apache Kafka projects",
+      "name": "Kafka"
+     }
+    },
+    "aggregatetimespent": null,
+    "customfield_12312520": null,
+    "customfield_12312521": "Tue Sep 15 17:28:50 UTC 2026",
+    "customfield_12314422": null,
+    "customfield_12314421": null,
+    "customfield_12314146": null,
+    "customfield_12314420": null,
+    "customfield_12314145": null,
+    "customfield_12314144": null,
+    "customfield_12314143": null,
+    "resolutiondate": null,
+    "workratio": -1,
+    "customfield_12312923": null,
+    "customfield_12312920": null,
+    "customfield_12312921": null,
+    "watches": {
+     "self": "https://issues.apache.org/jira/rest/api/2/issue/KAFKA-21101/watchers",
+     "watchCount": 2,
+     "isWatching": false
+    },
+    "created": "2026-09-15T16:23:35.000+0000",
+    "customfield_10022": null,
+    "updated": "2026-09-15T17:28:50.000+0000",
+    "timeoriginalestimate": null,
+    "description": "Currently, an invalid record marks the partition \"uncleanable\", which blocks the cleaner from compacting all other records in that partition. Since the record is already invalid regardless of the root cause, nobody can read it or anything after it in the same batch (consumers parse a batch sequentially and fail at the same point), so dropping them is a more targeted fix than deleteRecords, which removes everything before an offset. We should offer an option to drop the invalid record and the remaining records of its batch, and keep the partition cleanable. Records before the invalid one are parsed successfully and are retained as usual.",
+    "customfield_10010": null,
+    "customfield_12314523": null,
+    "customfield_12314127": null,
+    "customfield_12314522": null,
+    "customfield_12314126": null,
+    "customfield_12314521": null,
+    "customfield_12314125": null,
+    "customfield_12314520": null,
+    "customfield_12314124": null,
+    "customfield_12312340": null,
+    "customfield_12314123": null,
+    "customfield_12312341": null,
+    "customfield_12312220": null,
+    "customfield_12314122": null,
+    "customfield_12314121": null,
+    "customfield_12314120": null,
+    "customfield_12314129": null,
+    "customfield_12314524": null,
+    "customfield_12314128": null,
+    "summary": "Drop the remaining records of a batch when encountering an invalid record",
+    "customfield_12314130": null,
+    "customfield_12310291": null,
+    "customfield_12310290": null,
+    "customfield_12314138": null,
+    "customfield_12314137": null,
+    "environment": null,
+    "customfield_12314136": null,
+    "customfield_12314135": null,
+    "customfield_12311020": null,
+    "customfield_12314134": null,
+    "duedate": null,
+    "customfield_12314132": null,
+    "customfield_12314131": null,
+    "customfield_12311820": "0|z24408:",
+    "customfield_12314139": null
+   },
+   "changelog": {
+    "startAt": 0,
+    "maxResults": 4,
+    "total": 4,
+    "histories": [
+     {
+      "id": "23269828",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=chia7712",
+       "name": "chia7712",
+       "key": "chia7712",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?ownerId=chia7712&avatarId=46815",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&ownerId=chia7712&avatarId=46815",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&ownerId=chia7712&avatarId=46815",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&ownerId=chia7712&avatarId=46815"
+       },
+       "displayName": "Chia-Ping Tsai",
+       "active": true,
+       "timeZone": "Asia/Taipei"
+      },
+      "created": "2026-09-15T16:23:52.594+0000",
+      "items": [
+       {
+        "field": "Link",
+        "fieldtype": "jira",
+        "from": null,
+        "fromString": null,
+        "to": "KAFKA-21100",
+        "toString": "This issue is related to KAFKA-21100"
+       }
+      ]
+     },
+     {
+      "id": "23269837",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=chia7712",
+       "name": "chia7712",
+       "key": "chia7712",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?ownerId=chia7712&avatarId=46815",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&ownerId=chia7712&avatarId=46815",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&ownerId=chia7712&avatarId=46815",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&ownerId=chia7712&avatarId=46815"
+       },
+       "displayName": "Chia-Ping Tsai",
+       "active": true,
+       "timeZone": "Asia/Taipei"
+      },
+      "created": "2026-09-15T16:28:42.548+0000",
+      "items": [
+       {
+        "field": "labels",
+        "fieldtype": "jira",
+        "from": null,
+        "fromString": "",
+        "to": null,
+        "toString": "need-kip"
+       }
+      ]
+     },
+     {
+      "id": "23269876",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=majialong",
+       "name": "majialong",
+       "key": "JIRAUSER310372",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?avatarId=34058",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&avatarId=34058",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&avatarId=34058",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&avatarId=34058"
+       },
+       "displayName": "majialong",
+       "active": true,
+       "timeZone": "Etc/UTC"
+      },
+      "created": "2026-09-15T16:47:05.469+0000",
+      "items": [
+       {
+        "field": "assignee",
+        "fieldtype": "jira",
+        "from": "chia7712",
+        "fromString": "Chia-Ping Tsai",
+        "to": "JIRAUSER310372",
+        "toString": "majialong"
+       }
+      ]
+     },
+     {
+      "id": "23269976",
+      "author": {
+       "self": "https://issues.apache.org/jira/rest/api/2/user?username=chia7712",
+       "name": "chia7712",
+       "key": "chia7712",
+       "avatarUrls": {
+        "48x48": "https://issues.apache.org/jira/secure/useravatar?ownerId=chia7712&avatarId=46815",
+        "24x24": "https://issues.apache.org/jira/secure/useravatar?size=small&ownerId=chia7712&avatarId=46815",
+        "16x16": "https://issues.apache.org/jira/secure/useravatar?size=xsmall&ownerId=chia7712&avatarId=46815",
+        "32x32": "https://issues.apache.org/jira/secure/useravatar?size=medium&ownerId=chia7712&avatarId=46815"
+       },
+       "displayName": "Chia-Ping Tsai",
+       "active": true,
+       "timeZone": "Asia/Taipei"
+      },
+      "created": "2026-09-15T17:25:16.580+0000",
+      "items": [
+       {
+        "field": "description",
+        "fieldtype": "jira",
+        "from": null,
+        "fromString": "Currently, an invalid record marks the partition \"uncleanable\", which blocks the cleaner from compacting all other records in that partition. Since the record is already invalid regardless of the root cause, nobody can read it or anything after it in the same batch (consumers parse a batch sequentially and fail at the same point), so dropping them loses nothing observable. We should offer an option to drop the invalid record and the remaining records of its batch, and keep the partition cleanable. Records before the invalid one are parsed successfully and are retained as usual.",
+        "to": null,
+        "toString": "Currently, an invalid record marks the partition \"uncleanable\", which blocks the cleaner from compacting all other records in that partition. Since the record is already invalid regardless of the root cause, nobody can read it or anything after it in the same batch (consumers parse a batch sequentially and fail at the same point), so dropping them is a more targeted fix than deleteRecords, which removes everything before an offset. We should offer an option to drop the invalid record and the remaining records of its batch, and keep the partition cleanable. Records before the invalid one are parsed successfully and are retained as usual."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}
