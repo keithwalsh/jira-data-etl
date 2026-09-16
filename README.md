@@ -1,17 +1,36 @@
 # jira-data-etl
 
-A lightweight Python loader from the Jira Cloud REST API into a SQL database. One JQL query in;
-four tables out: issues with their standard fields, custom fields in long format, the full
-changelog, and comments, with Jira's nested JSON flattened into plain columns.
+A lightweight Python loader from the Jira REST API into a SQL database. One JQL query in; four
+tables out: issues with their standard fields, custom fields in long format, the full changelog,
+and comments, with Jira's nested JSON flattened into plain columns. Works against Jira Cloud
+(REST API v3) and Jira Data Center (v2), writes to DuckDB with no setup or to MySQL.
 
-**Status, 16 September 2026: a working prototype from September 2024, being reshaped into a
-tool other people can run.** What it does today is described below exactly as the code does it,
-including the defects. The roadmap at the end is the order they get fixed.
+**Status, 16 September 2026: runs end to end against Apache's public Jira.** A working
+prototype from September 2024, reshaped into a tool other people can run. What it does is
+described below exactly as the code does it. The roadmap at the end is the order the rest lands.
+
+## Try it in one minute
+
+Apache's Jira allows anonymous reads, so this needs no account:
+
+```bash
+pip install git+https://github.com/keithwalsh/jira-data-etl
+jira-data-etl --base-url https://issues.apache.org/jira --api-version 2 \
+  --jql "project = KAFKA AND created >= -5d" --to duckdb --db kafka.duckdb
+```
+
+Checked on 16 September 2026: 35 issues fetched, and Jira's own count for that JQL was 35.
+Then, in Python or the DuckDB CLI:
+
+```sql
+SELECT issue_key, status, assignee, created FROM issue ORDER BY created DESC;
+SELECT fromstring, tostring, created FROM history WHERE field = 'status';
+```
 
 ## What it does
 
-`main.py` runs one JQL query with `expand=changelog` and hands each page of issues to four
-loaders:
+`fetch_issues()` runs one JQL query with `expand=changelog`, following `startAt` until every
+page is in. Four transforms then produce the rows, and a loader writes each table once:
 
 | Table | Grain | Columns |
 | --- | --- | --- |
@@ -22,13 +41,13 @@ loaders:
 
 Every value passes through one `clean()` function before it is stored:
 
-- Rich text in Atlassian Document Format (descriptions, comment bodies) is flattened to text:
-  paragraphs and headings kept, bold marked `**like this**`, links as `[text](url)`, bullet
-  lists as `* item`.
+- Rich text in Atlassian Document Format (Cloud descriptions and comment bodies) is flattened to
+  text: paragraphs and headings kept, bold marked `**like this**`, links as `[text](url)`,
+  bullet lists as `* item`. Data Center returns wiki markup as plain strings, stored as is.
 - Objects such as users, statuses, priorities and select-list options are reduced to one
   string, the first of `displayName`, `key`, `name`, `value` that is present.
 - Lists (labels, components, multi-selects) are joined with commas.
-- Jira timestamps become `YYYY-MM-DD HH:MM`. Issue self-links become the issue id.
+- Jira timestamps become `YYYY-MM-DD HH:MM`. Issue sub-resource links become the issue id.
 - Empty strings become `NULL`.
 
 Custom fields go into a long table on purpose: adding a field in Jira then adds rows, not
@@ -36,68 +55,73 @@ columns, and the schema never changes underneath a downstream model. The changel
 row for row because it is the only source of truth for how long an issue spent in each status;
 the issue's current status is a snapshot.
 
-Each run is a full refresh: every loader truncates its table and inserts the current result.
-There is no incremental mode.
+Each run is a full refresh: every table is emptied and reloaded with the current result. There
+is no incremental mode.
 
 ## Running it
 
-Requires Python 3.12 or later and a MySQL database in which the four tables above already
-exist. No DDL ships with the repo yet; the `issue` table's columns depend on which standard
-fields your instance returns.
+Requires Python 3.12 or later.
 
 ```bash
-pip install -r requirements.txt
-cp .env.example .env      # then fill it in
-python main.py
+pip install -e .            # DuckDB target
+pip install -e ".[mysql]"   # adds the MySQL driver
+jira-data-etl --help
 ```
 
-The JQL lives in `main.py` (`jql = ...`). Change it there.
-
-| Variable | Meaning |
+| Option | Meaning |
 | --- | --- |
-| `JIRA_EMAIL` | Atlassian account email. With `JIRA_API_TOKEN` it forms the Basic auth header. |
-| `JIRA_API_TOKEN` | API token from id.atlassian.com. Sent on its own if no email is set. |
-| `JIRA_DOMAIN` | Your site, `yourcompany.atlassian.net`. |
-| `MYSQL_HOST`, `MYSQL_PORT`, `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_DATABASE` | Target database. |
+| `--jql` | The query. Required. |
+| `--base-url` | `https://yourco.atlassian.net` or `https://issues.apache.org/jira`. Defaults to `https://$JIRA_DOMAIN`. |
+| `--api-version` | `3` for Jira Cloud (default), `2` for Jira Data Center. |
+| `--to` | `duckdb` (default) or `mysql`. |
+| `--db` | DuckDB file, default `jira.duckdb`. Tables are created on first sight, every column `VARCHAR`; type them downstream. |
+| `--max-results` | Page size, default 100. |
+| `--skip-comments` | Skip comments, which cost one request per issue. |
+
+Credentials come from the environment or a `.env` file (see `.env.example`): `JIRA_EMAIL` and
+`JIRA_API_TOKEN` for Jira Cloud, `MYSQL_*` for the MySQL target. With no token set, requests go
+out anonymously, which is what a public instance wants.
 
 ## Layout
 
 ```
-main.py            the JQL and the four loaders
-core/extract.py    one authenticated GET
-core/workflow.py   pages through the search results and calls the loaders
-core/load.py       truncate and bulk insert
-util/auth.py       Basic auth header
-util/field.py      standard/custom split, clean()
-util/text.py       Atlassian Document Format to text
-util/time.py       timestamp formatting
+src/jira_data_etl/
+  cli.py         arguments, wiring, exit codes
+  workflow.py    fetch_issues(): paginated search with changelogs
+  extract.py     one GET, raises with the URL on failure
+  transform.py   the four row builders, including paginated comments
+  load.py        DuckDBLoader (creates tables), MySQLLoader (tables must exist)
+  auth.py        Basic auth header, or None for anonymous
+  field.py       standard/custom split, clean()
+  text.py        Atlassian Document Format to text
+  time.py        timestamp formatting
 ```
 
 ## Known issues
 
 Verified against the code on 16 September 2026.
 
-1. **No schema shipped.** The four tables must be created by hand.
-2. **A failed request stops the run.** `make_api_request` prints the error and returns `None`;
-   the loaders then raise `RuntimeError` naming the page or issue that failed. Nothing is
-   retried, and because each table is truncated before insert, a run that fails part-way leaves
-   the tables that had already loaded refreshed and the rest untouched.
-3. Jira Cloud only (REST API v3, Atlassian Document Format bodies). MySQL only. No tests.
+1. **MySQL tables are not created.** The DuckDB target creates its own; the MySQL target
+   truncates and inserts into tables you create by hand, and the `issue` table's columns depend
+   on which standard fields your instance returns.
+2. **A failed request stops the run.** Nothing is retried, and because each table is emptied
+   before insert, a run that fails part-way leaves the tables already loaded refreshed and the
+   rest untouched.
+3. **No tests yet.** The live check above is the only verification.
 
 Fixed 16 September 2026: issue and comment pagination never advanced past the first page, each
-page truncated its table so only the last page survived, and the search URL was hardcoded to one
-Atlassian site instead of reading `JIRA_DOMAIN`.
+page truncated its table so only the last page survived, the search URL was hardcoded to one
+Atlassian site, and the `issue` table gave every row the first issue's field values.
 
 ## Roadmap
 
 In this order.
 
 - [x] Pagination and `JIRA_DOMAIN`; load each table once per run
-- [ ] A command line: `jira-data-etl --base-url ... --jql ... --to mysql|duckdb`
-- [ ] DuckDB target, with tables created on first run, so a clone runs with no database setup
-- [ ] Jira Data Center support (REST API v2, wiki-markup bodies), demonstrated against Apache's
-      public Jira at `issues.apache.org/jira`, which allows anonymous reads
+- [x] Command line entry point; DuckDB target with tables created on first run
+- [x] Jira Data Center (REST API v2) and anonymous access, checked against Apache's Jira
 - [ ] Tests against recorded API responses; GitHub Actions on every push
+- [ ] Create MySQL tables when missing
 - [ ] Publish to PyPI
 
 ## Related

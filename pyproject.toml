@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jira-data-etl"
+version = "0.2.0"
+description = "Load Jira issues, custom fields, changelogs and comments from the REST API into DuckDB or MySQL."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Keith Walsh" }]
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.31",
+    "python-dotenv>=1.0",
+    "duckdb>=1.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Database",
+]
+
+[project.optional-dependencies]
+mysql = ["mysql-connector-python>=8.0"]
+
+[project.urls]
+Homepage = "https://github.com/keithwalsh/jira-data-etl"
+
+[project.scripts]
+jira-data-etl = "jira_data_etl.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

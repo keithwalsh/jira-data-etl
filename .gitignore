@@ -13,3 +13,8 @@ dev.py
 __pycache__/
 *.notes
 *.copy
+# Build and data
+*.duckdb
+*.egg-info/
+build/
+dist/
