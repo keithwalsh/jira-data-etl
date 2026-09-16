@@ -1,6 +1,7 @@
 # jira-data-etl
 
 [![CI](https://github.com/keithwalsh/jira-data-etl/actions/workflows/ci.yml/badge.svg)](https://github.com/keithwalsh/jira-data-etl/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/jira-data-etl)](https://pypi.org/project/jira-data-etl/)
 
 A lightweight Python loader from the Jira REST API into a SQL database. One JQL query in; four
 tables out: issues with their standard fields, custom fields in long format, the full changelog,
@@ -16,7 +17,7 @@ described below exactly as the code does it. The roadmap at the end is the order
 Apache's Jira allows anonymous reads, so this needs no account:
 
 ```bash
-pip install git+https://github.com/keithwalsh/jira-data-etl
+pip install jira-data-etl
 jira-data-etl --base-url https://issues.apache.org/jira --api-version 2 \
   --jql "project = KAFKA AND created >= -5d" --to duckdb --db kafka.duckdb
 ```
@@ -65,10 +66,13 @@ is no incremental mode.
 Requires Python 3.12 or later.
 
 ```bash
-pip install -e .            # DuckDB target
-pip install -e ".[mysql]"   # adds the MySQL driver
+pip install jira-data-etl            # DuckDB target
+pip install "jira-data-etl[mysql]"   # adds the MySQL driver
 jira-data-etl --help
 ```
+
+From a clone, `pip install -e ".[test]"` and `pytest`. Releases are built and published to PyPI
+by GitHub Actions when a `v*` tag is pushed.
 
 | Option | Meaning |
 | --- | --- |
@@ -126,8 +130,9 @@ In this order.
 - [x] Command line entry point; DuckDB target with tables created on first run
 - [x] Jira Data Center (REST API v2) and anonymous access, checked against Apache's Jira
 - [x] Tests against recorded API responses; GitHub Actions on every push (Python 3.12 and 3.13)
+- [x] Publish to PyPI (0.2.0, 16 September 2026)
 - [ ] Create MySQL tables when missing
-- [ ] Publish to PyPI
+- [ ] Retry transient HTTP failures; incremental mode (`updated >= last run`)
 
 ## Related
 
